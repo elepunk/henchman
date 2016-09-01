@@ -10,7 +10,7 @@ defmodule Henchman.Randomizer do
   @doc """
   Generate random string that in multiple type. Default type is ```alphanumeric```.
 
-  ## Supported Types
+  ## Supported types
   * ```:alphanumeric``` - Random alphanumeric string
   * ```:numeric``` - Random numeric only string
   * ```:upper``` - Random non-numeric upper case string
@@ -37,7 +37,7 @@ defmodule Henchman.Randomizer do
 
     do_generate(length, lists)
   end
-  
+
   @doc false
   defp do_generate(length, lists) do
     get_range(length)
