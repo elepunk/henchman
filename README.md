@@ -1,5 +1,7 @@
 # Henchman
 
+[![Build Status](https://travis-ci.org/elepunk/henchman.svg?branch=master)](https://travis-ci.org/elepunk/henchman)
+
 A set of helpers for elixir.
 
 ## Installation
