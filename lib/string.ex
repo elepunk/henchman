@@ -4,10 +4,23 @@ defmodule Henchman.String do
   """
 
   @doc """
+  Get the acronym from a string.
+
+  ## Example
+      iex> Henchman.String.acronym("foo bar") //"FB"
+  """
+  def acronym(value) do
+    value
+    |> slug
+    |> String.split("-")
+    |> Enum.map_join("", &(String.first(title_case(&1))))
+  end
+
+  @doc """
   Convert string to camel case.
 
   ## Example
-      iex>Henchman.String.camel_case(foo-bar)#fooBar
+      iex>Henchman.String.camel_case("foo-bar")#fooBar
   """
   @spec camel_case(String.t) :: String.t
   def camel_case(value) do
@@ -26,6 +39,19 @@ defmodule Henchman.String do
     value
     |> String.slice(0, length)
     |> String.pad_trailing(length+String.length(suffix), suffix)
+  end
+
+  @doc """
+  Convert string to slug format.
+
+  ## Example
+      iex>Henchman.String.slug("foo Bar")#foo-bar
+  """
+  @spec slug(String.t, String.t) :: String.t
+  def slug(value, delimiter \\ "-") do
+    value
+    |> String.downcase
+    |> String.replace(~r/[^\w-]+/, delimiter)
   end
 
   @doc """

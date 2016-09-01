@@ -3,12 +3,20 @@ defmodule Henchman.StringTest do
 
   alias Henchman.String, as: Str
 
+  test "get acronym from string" do
+    assert "FB" = Str.acronym("foo bar")
+  end
+
   test "convert string to camel case" do
     assert "fooBarBaz" = Str.camel_case("foo-bar_baz")
   end
 
   test "truncate characters in a string" do
-    assert "Foo bar..." = Str.limit("Foo bar baz", 7)
+    assert "Foo bar ba..." = Str.limit("Foo bar baz baz", 10)
+  end
+
+  test "convert string to slug format" do
+    assert "foo-bar" = Str.slug("foo Bar")
   end
 
   test "convert string to snake case" do
