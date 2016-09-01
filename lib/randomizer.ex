@@ -48,5 +48,5 @@ defmodule Henchman.Randomizer do
   @doc false
   defp get_range(length) when length > 1, do: (1..length)
   defp get_range(length) when length < 1, do: raise InvalidLengthError
-  defp get_range(length), do: [1]
+  defp get_range(length) when length == 1, do: [1]
 end
