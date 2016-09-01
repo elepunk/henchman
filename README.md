@@ -18,7 +18,7 @@ end
 
 Henchman provides a set helpers that will come in handy.
 
-#### Randomizer
+### Randomizer
 
 Generate random string for a specific length. There are 4 types supported:
 * ```:alphanumeric``` - Random alphanumeric string
@@ -30,4 +30,70 @@ Generate random string for a specific length. There are 4 types supported:
 ```elixir
 iex> Henchman.Randomizer.generate(20) #generate alphanumeric string
 iex> Henchman.Randomizer.generate(20, :numeric) #generate numeric only string
+```
+
+### String Helpers
+
+#### Acronym
+
+Generate acronym from string.
+
+##### Example
+```elixir
+iex> Henchman.String.acronym("foo bar")#FB
+```
+
+#### Camel case
+
+Convert string to ```camelCase```.
+
+##### Example
+```elixir
+iex> Henchman.String.camel_case("foo-bar")#fooBar
+```
+
+#### Slug
+
+Convert string to slug format.
+
+##### Example
+```elixir
+iex> Henchman.String.slug("Foo bar")#foo-bar
+```
+
+#### Snake case
+
+Convert string to ```snake_case```.
+
+##### Example
+```elixir
+iex> Henchman.String.snake_case("FooBar")#foo_bar
+```
+
+#### Studly case
+
+Convert string to ```StudlyCase```.
+
+##### Example
+```elixir
+iex> Henchman.String.studly_case("foo-bar")#FooBar
+```
+
+#### Title case
+
+Capitalize every first letters in a string.
+
+##### Example
+```elixir
+iex> Henchman.String.title_case("foo bar-baz")#Foo Bar-baz
+```
+
+#### Truncate
+
+The string module can either truncate characters or words within a string.
+
+##### Example
+```elixir
+iex> Henchman.String.limit("Foo bar baz baz", 10)#Foo bar ba....
+iex> Henchman.String.word_limit("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", 7)#Lorem ipsum dolor sit amet, consectetur adipiscing...
 ```
