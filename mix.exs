@@ -7,7 +7,9 @@ defmodule Henchman.Mixfile do
      elixir: "~> 1.3",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
-     deps: deps()]
+     deps: deps(),
+     description: "Set of helpers for Elixir",
+     package: package]
   end
 
   # Configuration for the OTP application
@@ -28,5 +30,14 @@ defmodule Henchman.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     [{:ex_doc, "~> 0.11", only: :dev}]
+  end
+
+  defp package do
+    [
+      maintainers: ["Ahmad Shah Hafizan Hamidin"],
+      licenses: ["MIT"],
+      links: %{"Github" => "https://github.com/elepunk/henchman"},
+      files: ["lib", "mix.exs", "README.md", "LICENSE"]
+    ]
   end
 end
