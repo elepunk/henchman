@@ -20,7 +20,7 @@ defmodule Henchman.String do
   Convert string to camel case.
 
   ## Example
-      iex>Henchman.String.camel_case("foo-bar")#fooBar
+      iex> Henchman.String.camel_case("foo-bar")#fooBar
   """
   @spec camel_case(String.t) :: String.t
   def camel_case(value) do
