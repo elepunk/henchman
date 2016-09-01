@@ -1,6 +1,8 @@
 # Henchman
 
 [![Build Status](https://travis-ci.org/elepunk/henchman.svg?branch=master)](https://travis-ci.org/elepunk/henchman)
+[![Hex Downloads](https://img.shields.io/hexpm/dt/henchman.svg)](https://hex.pm/packages/henchman)
+[![Hex Version](https://img.shields.io/hexpm/v/henchman.svg)](https://hex.pm/packages/henchman)
 
 A set of helpers for elixir.
 
