@@ -51,7 +51,7 @@ defmodule Henchman.String do
   def slug(value, delimiter \\ "-") do
     value
     |> String.downcase
-    |> String.replace(~r/[^\w-]+/, delimiter)
+    |> String.replace(~r/[^\w-]+/u, delimiter)
   end
 
   @doc """

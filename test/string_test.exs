@@ -4,7 +4,7 @@ defmodule Henchman.StringTest do
   alias Henchman.String, as: Str
 
   test "get acronym from string" do
-    assert "FB" = Str.acronym("foo bar")
+    assert "FB" = Str.acronym("fòô bàř")
   end
 
   test "convert string to camel case" do
