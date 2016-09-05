@@ -99,7 +99,7 @@ Determine if string contains upper case characters only.
 iex> Henchman.String.is_uppercase?("BAR")#true
 ```
 
-#### slug/1 or slug/2
+##### slug/1 or slug/2
 
 Convert string to slug format.
 
@@ -108,7 +108,7 @@ iex> Henchman.String.slug("Foo bar")#foo-bar
 iex> Henchman.String.slug("Foo bar", "_")#foo_bar
 ```
 
-#### snake_case/1 or snake_case/2
+##### snake_case/1 or snake_case/2
 
 Convert string to ```snake_case```.
 
@@ -117,7 +117,7 @@ iex> Henchman.String.snake_case("FooBar")#foo_bar
 iex> Henchman.String.snake_case("FooBar", "-")#foo-bar
 ```
 
-#### studly_case/1
+##### studly_case/1
 
 Convert string to ```StudlyCase```.
 
@@ -125,7 +125,7 @@ Convert string to ```StudlyCase```.
 iex> Henchman.String.studly_case("foo-bar")#FooBar
 ```
 
-#### title_case/1
+##### title_case/1
 
 Capitalize every first letters in a string.
 
@@ -133,7 +133,7 @@ Capitalize every first letters in a string.
 iex> Henchman.String.title_case("foo bar-baz")#Foo Bar-baz
 ```
 
-#### limit/2 or word_limit/2
+##### limit/2 or word_limit/2
 
 The string module can either truncate characters or words within a string.
 
@@ -141,3 +141,7 @@ The string module can either truncate characters or words within a string.
 iex> Henchman.String.limit("Foo bar baz baz", 10)#Foo bar ba....
 iex> Henchman.String.word_limit("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", 7)#Lorem ipsum dolor sit amet, consectetur adipiscing...
 ```
+
+## License
+
+Released under the MIT license - see ```LICENSE``` for details.
