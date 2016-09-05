@@ -11,6 +11,30 @@ defmodule Henchman.StringTest do
     assert "fooBarBaz" = Str.camel_case("foo-bar_baz")
   end
 
+  test "check if string is alphabets only" do
+    assert Str.is_alpha?("ABCdef")
+  end
+
+  test "check if string is alphanumeric" do
+    assert Str.is_alphanumeric?("123ABCdef")
+  end
+
+  test "check if string is blank" do
+    assert Str.is_blank?(" ")
+  end
+
+  test "check if string is lower case" do
+    assert Str.is_lowercase?("foobar")
+  end
+
+  test "check if string is numeric only" do
+    assert Str.is_numeric?("123")
+  end
+
+  test "check if string is upper case" do
+    assert Str.is_uppercase?("FOOBAR")
+  end
+
   test "truncate characters in a string" do
     assert "Foo bar ba..." = Str.limit("Foo bar baz baz", 10)
   end
