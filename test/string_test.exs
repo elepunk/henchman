@@ -4,11 +4,35 @@ defmodule Henchman.StringTest do
   alias Henchman.String, as: Str
 
   test "get acronym from string" do
-    assert "FB" = Str.acronym("foo bar")
+    assert "FB" = Str.acronym("fòô bàř")
   end
 
   test "convert string to camel case" do
     assert "fooBarBaz" = Str.camel_case("foo-bar_baz")
+  end
+
+  test "check if string is alphabets only" do
+    assert Str.is_alpha?("ABCdef")
+  end
+
+  test "check if string is alphanumeric" do
+    assert Str.is_alphanumeric?("123ABCdef")
+  end
+
+  test "check if string is blank" do
+    assert Str.is_blank?(" ")
+  end
+
+  test "check if string is lower case" do
+    assert Str.is_lowercase?("foobar")
+  end
+
+  test "check if string is numeric only" do
+    assert Str.is_numeric?("123")
+  end
+
+  test "check if string is upper case" do
+    assert Str.is_uppercase?("FOOBAR")
   end
 
   test "truncate characters in a string" do
