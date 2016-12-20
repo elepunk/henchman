@@ -14,6 +14,5 @@ defmodule Henchman do
   defdelegate acronym(string), to: Henchman.String
   defdelegate word_limit(string, limit \\ 100, suffix \\ "..."), to: Henchman.String
   defdelegate randomize(length, type \\ :alphanumeric), to: Henchman.Randomizer, as: :generate
-  defdelegate randomize(length, type \\ :alphanumeric), to: Henchman.Randomizer, as: :generate
   defdelegate convert_length(value, from, to, show_unit \\ false, precision \\ 4), to: Henchman.Converter.Length, as: :convert
 end
