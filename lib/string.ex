@@ -32,55 +32,55 @@ defmodule Henchman.String do
   Determine if string contains alphabets only.
 
   ## Example
-      iex> Henchman.String.is_alpha?("ABCdef")#true
+      iex> Henchman.String.alpha?("ABCdef")#true
   """
-  @spec is_alpha?(String.t) :: String.t
-  def is_alpha?(value), do: String.match?(value, ~r/^[A-Za-z]*$/u)
+  @spec alpha?(String.t) :: String.t
+  def alpha?(value), do: String.match?(value, ~r/^[A-Za-z]*$/u)
 
   @doc """
   Determine if string contains alphabets and integers.
 
   ## Example
-      iex> Henchman.String.is_alphanumeric?("ABCdef123")#true
+      iex> Henchman.String.alphanumeric?("ABCdef123")#true
   """
-  @spec is_alphanumeric?(String.t) :: String.t
-  def is_alphanumeric?(value), do: String.match?(value, ~r/^[A-Za-z0-9]*$/u)
+  @spec alphanumeric?(String.t) :: String.t
+  def alphanumeric?(value), do: String.match?(value, ~r/^[A-Za-z0-9]*$/u)
 
   @doc """
   Determine if string is blank.
 
   ## Example
-      iex> Henchman.String.is_blank?("")#true
+      iex> Henchman.String.blank?("")#true
   """
-  @spec is_blank?(String.t) :: String.t
-  def is_blank?(value), do: String.match?(value, ~r/^[\s]*$/u)
+  @spec blank?(String.t) :: String.t
+  def blank?(value), do: String.match?(value, ~r/^[\s]*$/u)
 
   @doc """
   Determine if string contains lower case characters only.
 
   ## Example
-      iex> Henchman.String.is_lowercase?("def")#true
+      iex> Henchman.String.lowercased?("def")#true
   """
-  @spec is_lowercase?(String.t) :: String.t
-  def is_lowercase?(value), do: String.match?(value, ~r/^[a-z]*$/u)
+  @spec lowercased?(String.t) :: String.t
+  def lowercased?(value), do: String.match?(value, ~r/^[a-z]*$/u)
 
   @doc """
   Determine if string contains integers only.
 
   ## Example
-      iex> Henchman.String.is_numeric?("123")#true
+      iex> Henchman.String.numeric?("123")#true
   """
-  @spec is_numeric?(String.t) :: String.t
-  def is_numeric?(value), do: String.match?(value, ~r/^[0-9]*$/u)
+  @spec numeric?(String.t) :: String.t
+  def numeric?(value), do: String.match?(value, ~r/^[0-9]*$/u)
 
   @doc """
   Determine if string contains upper case characters only.
 
   ## Example
-      iex> Henchman.String.is_uppercase?("ABC")#true
+      iex> Henchman.String.uppercased?("ABC")#true
   """
-  @spec is_uppercase?(String.t) :: String.t
-  def is_uppercase?(value), do: String.match?(value, ~r/^[A-Z]*$/u)
+  @spec uppercased?(String.t) :: String.t
+  def uppercased?(value), do: String.match?(value, ~r/^[A-Z]*$/u)
 
   @doc """
   Limit characters within a string.
