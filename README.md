@@ -12,7 +12,7 @@ Add `henchman` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
-  [{:henchman, "~> 0.2.0"}]
+  [{:henchman, "~> 0.3.0"}]
 end
 ```
 
